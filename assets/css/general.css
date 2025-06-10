@@ -12817,4 +12817,201 @@ pre .code {
   margin-top: 10px;
 }
 
+.braces {
+  color: #008080; /* bright green */
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 4px;
+}
+
+.header-subtitle {
+  font-family: 'Courier New', Courier, monospace;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+.header-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #222;
+  margin-top: 0.2em;
+}
+
+.name-highlight {
+  background: linear-gradient(90deg, #5ae1e188, #5ae1e188);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.profile-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #4a6cf7, #2541b2);
+}
+
+.profile-header {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.profile-title {
+    color: #5ae1e188;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #4a6cf7, #2541b2);
+    margin: 0 auto 15px;
+    border-radius: 3px;
+}
+
+.profile-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.profile-content {
+    line-height: 1.8;
+    color: #444;
+}
+
+.profile-text {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+.highlight-first {
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.highlight-word {
+    color: #3fcfcf88;
+    font-weight: 600;
+}
+
+.experience-list {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.experience-list li {
+    margin-bottom: 12px;
+    position: relative;
+    list-style-type: none;
+    padding-left: 35px;
+}
+
+.icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.project-name {
+    font-weight: 600;
+    color: #3fcfcf88;
+    border-bottom: 2px dashed #a0b8e0;
+    padding-bottom: 2px;
+}
+
+.skills-highlight {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.skill-tag {
+    background: rgba(74, 108, 247, 0.15); /* darkened background */
+    color: #1f36a0; /* slightly deeper blue */
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(74, 108, 247, 0.5); /* more defined border */
+}
+
+.profile-quote {
+    font-style: italic;
+    padding: 20px;
+    background: rgba(230, 238, 255, 0.8); /* cooler, slightly deeper background */
+    border-left: 4px solid #1f36a0; /* matches updated color */
+    border-radius: 0 8px 8px 0;
+    margin-top: 30px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* subtle shadow for depth */
+}
+
+
+.profile-quote::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    color: rgba(74, 108, 247, 0.2);
+    font-family: serif;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 20px;
+    }
+    
+    .profile-title {
+        font-size: 1.8rem;
+    }
+}
+
+.about-card {
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.line {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+}
+
+.skill-tag {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+}
+
+
 /* 239daf */
