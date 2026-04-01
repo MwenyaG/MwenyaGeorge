@@ -247,11 +247,16 @@
                             </div>
                             <span class="preview-chip">Aura Farm</span>
                         </div>
-                        <div class="dashboard-shot-frame">
-                            <img src="assets/imgs/Screenshot 2026-04-01 at 1.30.06 AM.png"
-                                alt="Ibala Farm Management System light mode dashboard preview"
-                                class="dashboard-shot dashboard-shot-light">
-                        </div>
+                        <button type="button" class="dashboard-preview-trigger" data-toggle="modal"
+                            data-target="#dashboardPreviewModal"
+                            data-image="assets/imgs/Screenshot 2026-04-01 at 1.30.06 AM.png"
+                            data-title="Ibala Farm Management System - Light mode dashboard">
+                            <div class="dashboard-shot-frame">
+                                <img src="assets/imgs/Screenshot 2026-04-01 at 1.30.06 AM.png"
+                                    alt="Ibala Farm Management System light mode dashboard preview"
+                                    class="dashboard-shot dashboard-shot-light">
+                            </div>
+                        </button>
                     </article>
                     <article class="preview-card">
                         <div class="preview-card-head">
@@ -261,11 +266,16 @@
                             </div>
                             <span class="preview-chip">Aura Farm</span>
                         </div>
-                        <div class="dashboard-shot-frame dashboard-shot-frame-dark">
-                            <img src="assets/imgs/Screenshot 2026-04-01 at 1.30.27 AM.png"
-                                alt="Ibala Farm Management System dark mode dashboard preview"
-                                class="dashboard-shot dashboard-shot-dark">
-                        </div>
+                        <button type="button" class="dashboard-preview-trigger" data-toggle="modal"
+                            data-target="#dashboardPreviewModal"
+                            data-image="assets/imgs/Screenshot 2026-04-01 at 1.30.27 AM.png"
+                            data-title="Ibala Farm Management System - Dark mode dashboard">
+                            <div class="dashboard-shot-frame dashboard-shot-frame-dark">
+                                <img src="assets/imgs/Screenshot 2026-04-01 at 1.30.27 AM.png"
+                                    alt="Ibala Farm Management System dark mode dashboard preview"
+                                    class="dashboard-shot dashboard-shot-dark">
+                            </div>
+                        </button>
                     </article>
                 </div>
             </div>
@@ -803,6 +813,23 @@
             <p class="mb-0 footer-note">Crafting reliable web and mobile experiences with a strong QA mindset.</p>
         </div>
     </footer>
+
+    <div class="modal fade image-preview-modal" id="dashboardPreviewModal" tabindex="-1" role="dialog"
+        aria-labelledby="dashboardPreviewTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dashboardPreviewTitle">Dashboard Preview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="" alt="" class="image-preview-modal-shot" id="dashboardPreviewImage">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>

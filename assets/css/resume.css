@@ -4,6 +4,12 @@
     min-height: 100vh;
 }
 
+body.resume-page .resume-actions.reveal,
+body.resume-page .resume-paper.reveal {
+    opacity: 1;
+    transform: none;
+}
+
 .resume-main-wrap {
     padding: 2.5rem 0 5rem;
     position: relative;

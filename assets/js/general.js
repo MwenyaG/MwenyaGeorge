@@ -56,6 +56,12 @@
             return;
         }
 
+        revealItems.forEach(function (item) {
+            if (item.classList.contains("resume-paper") || item.offsetHeight > window.innerHeight * 1.1) {
+                item.classList.add("is-visible");
+            }
+        });
+
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
@@ -64,11 +70,14 @@
                 }
             });
         }, {
-            threshold: 0.18
+            threshold: 0.08,
+            rootMargin: "0px 0px -10% 0px"
         });
 
         revealItems.forEach(function (item) {
-            observer.observe(item);
+            if (!item.classList.contains("is-visible")) {
+                observer.observe(item);
+            }
         });
     }
 
@@ -104,10 +113,28 @@
         });
     }
 
+    function initDashboardPreview() {
+        $("#dashboardPreviewModal").on("show.bs.modal", function (event) {
+            var trigger = $(event.relatedTarget);
+            var image = trigger.data("image");
+            var title = trigger.data("title");
+
+            if (!image) {
+                return;
+            }
+
+            $(this).find("#dashboardPreviewTitle").text(title || "Dashboard Preview");
+            $(this).find("#dashboardPreviewImage")
+                .attr("src", image)
+                .attr("alt", title || "Dashboard preview image");
+        });
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         initTheme();
         initReveal();
         initSmoothScroll();
         initProjectCards();
+        initDashboardPreview();
     });
 })();

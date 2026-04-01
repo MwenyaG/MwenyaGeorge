@@ -700,6 +700,57 @@ body[data-theme="dark"] .custom-navbar .navbar-toggler-icon {
     height: auto;
 }
 
+.dashboard-preview-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    cursor: zoom-in;
+}
+
+.dashboard-preview-trigger:focus {
+    outline: none;
+}
+
+.dashboard-preview-trigger:focus .dashboard-shot-frame,
+.dashboard-preview-trigger:hover .dashboard-shot-frame {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.dashboard-shot-frame {
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.image-preview-modal .modal-content {
+    border-radius: 1.5rem;
+    border: 1px solid var(--surface-border);
+    background: var(--bg-soft);
+}
+
+.image-preview-modal .modal-header,
+.image-preview-modal .modal-body {
+    border: 0;
+}
+
+.image-preview-modal .modal-body {
+    padding-top: 0;
+}
+
+.image-preview-modal .close {
+    color: var(--heading);
+    opacity: 1;
+}
+
+.image-preview-modal-shot {
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+    border: 1px solid var(--surface-border);
+}
+
 .skill-grid {
     row-gap: 1.5rem;
 }
@@ -1251,6 +1302,43 @@ body[data-theme="dark"] .custom-navbar .navbar-toggler-icon {
         font-size: 0.82rem;
     }
 
+    .hero-panel {
+        padding: 1.15rem;
+    }
+
+    .hero-panel::before {
+        width: 7.5rem;
+        height: 7.5rem;
+        inset: -1rem auto auto 62%;
+    }
+
+    .hero-profile {
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-profile h2 {
+        font-size: 1.05rem;
+        line-height: 1.28;
+    }
+
+    .snapshot-grid {
+        gap: 0.65rem;
+    }
+
+    .snapshot-item {
+        padding: 0.82rem 0.9rem;
+    }
+
+    .snapshot-item strong {
+        font-size: 0.9rem;
+        line-height: 1.42;
+    }
+
+    .hero-panel-tags {
+        gap: 0.5rem;
+    }
+
     .section-heading {
         margin-bottom: 1.5rem;
     }
@@ -1394,6 +1482,23 @@ body[data-theme="dark"] .custom-navbar .navbar-toggler-icon {
     .hero-profile h2,
     .section-heading h2 {
         font-size: clamp(1.7rem, 8vw, 2.35rem);
+    }
+
+    .hero-panel {
+        padding: 1rem;
+    }
+
+    .hero-profile h2 {
+        font-size: 0.98rem;
+        line-height: 1.3;
+    }
+
+    .snapshot-item span {
+        font-size: 0.68rem;
+    }
+
+    .snapshot-item strong {
+        font-size: 0.86rem;
     }
 
     .project-display-card {
