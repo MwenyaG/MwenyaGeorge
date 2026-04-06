@@ -18,13 +18,10 @@
         var toggles = document.querySelectorAll(".theme-toggle");
         toggles.forEach(function (toggle) {
             toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+            toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+            toggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
 
-            var icon = toggle.querySelector("i");
-            var label = toggle.querySelector("span");
-
-            if (icon) {
-                icon.className = theme === "dark" ? "ti-shine" : "ti-light-bulb";
-            }
+            var label = toggle.querySelector(".theme-toggle-label");
 
             if (label) {
                 label.textContent = theme === "dark" ? "Light mode" : "Dark mode";

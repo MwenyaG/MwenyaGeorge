@@ -186,8 +186,22 @@ a:hover {
     background: var(--surface-border);
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 .theme-toggle-item {
     margin-left: 0.75rem;
+    display: flex;
+    align-items: center;
 }
 
 .theme-toggle {
@@ -195,17 +209,97 @@ a:hover {
     background: var(--surface);
     color: var(--heading);
     border-radius: 999px;
-    padding: 0.7rem 1rem;
+    padding: 0.22rem;
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    font-weight: 700;
+    justify-content: center;
+    width: 4.5rem;
+    height: 2.5rem;
     box-shadow: var(--shadow-soft);
-    transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .theme-toggle:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
+}
+
+.theme-toggle-track {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    position: relative;
+    display: block;
+    background: linear-gradient(180deg, rgba(227, 236, 249, 0.9), rgba(214, 226, 244, 0.9));
+    overflow: hidden;
+}
+
+.theme-toggle-option {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: rgba(82, 96, 122, 0.82);
+    transition: color 0.3s ease, opacity 0.3s ease;
+    z-index: 1;
+}
+
+.theme-toggle-option-sun {
+    left: 0.7rem;
+}
+
+.theme-toggle-option-moon {
+    right: 0.7rem;
+}
+
+.theme-toggle-thumb {
+    position: absolute;
+    top: 0.16rem;
+    left: 0.16rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffffff 0%, #ecf4ff 100%);
+    box-shadow: 0 10px 24px rgba(14, 28, 52, 0.2);
+    transition: transform 0.28s ease, background 0.28s ease, box-shadow 0.28s ease;
+    z-index: 2;
+}
+
+.theme-toggle[aria-pressed="true"] .theme-toggle-thumb {
+    transform: translateX(1.78rem);
+    background: linear-gradient(135deg, #102446 0%, #1a3560 100%);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.34);
+}
+
+.theme-toggle[aria-pressed="true"] .theme-toggle-option-sun,
+.theme-toggle[aria-pressed="false"] .theme-toggle-option-moon {
+    opacity: 0.48;
+}
+
+.theme-toggle[aria-pressed="false"] .theme-toggle-option-sun,
+.theme-toggle[aria-pressed="true"] .theme-toggle-option-moon {
+    color: var(--heading);
+    opacity: 1;
+}
+
+body[data-theme="dark"] .theme-toggle {
+    background: rgba(15, 28, 49, 0.9);
+}
+
+body[data-theme="dark"] .theme-toggle-track {
+    background: linear-gradient(180deg, rgba(16, 34, 59, 0.96), rgba(11, 24, 42, 0.96));
+}
+
+body[data-theme="dark"] .theme-toggle-option {
+    color: rgba(188, 203, 233, 0.72);
+}
+
+body[data-theme="dark"] .theme-toggle[aria-pressed="true"] .theme-toggle-option-moon,
+body[data-theme="dark"] .theme-toggle[aria-pressed="false"] .theme-toggle-option-sun {
+    color: #f5f8ff;
 }
 
 .theme-toggle:focus,
@@ -1285,15 +1379,6 @@ body[data-theme="dark"] .modern-footer p {
         display: none !important;
     }
 
-    .theme-toggle-item {
-        width: 100%;
-    }
-
-    .theme-toggle {
-        width: 100%;
-        justify-content: center;
-    }
-
     .hero-section {
         padding-top: 4rem;
     }
@@ -1303,7 +1388,8 @@ body[data-theme="dark"] .modern-footer p {
     }
 
     .theme-toggle-item {
-        margin: 0.5rem 0 0;
+        margin: 0.75rem 0 0;
+        width: auto;
     }
 
     .contact-panel,
@@ -1603,6 +1689,20 @@ body[data-theme="dark"] .modern-footer p {
     .hero-chip,
     .theme-toggle {
         font-size: 0.78rem;
+    }
+
+    .theme-toggle {
+        width: 4.15rem;
+        height: 2.35rem;
+    }
+
+    .theme-toggle-thumb {
+        width: 1.48rem;
+        height: 1.48rem;
+    }
+
+    .theme-toggle[aria-pressed="true"] .theme-toggle-thumb {
+        transform: translateX(1.58rem);
     }
 
     .hero-chip {
