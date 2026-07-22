@@ -111,7 +111,7 @@
     }
 
     function initMobileNav() {
-        $(".navbar-collapse .nav-link, .navbar-collapse .dropdown-item").on("click", function () {
+        $(".navbar-collapse .nav-link:not(.dropdown-toggle), .navbar-collapse .dropdown-item").on("click", function () {
             var collapse = $(".navbar-collapse");
             if (collapse.hasClass("show")) {
                 collapse.collapse("hide");
