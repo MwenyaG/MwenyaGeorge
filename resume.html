@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#f4f7fb">
     <title>George Mwenya Muyeba | Resume</title>
-    <link rel="icon" type="image/png" href="assets/imgs/profile.png">
-    <link rel="apple-touch-icon" href="assets/imgs/profile.png">
+    <link rel="icon" type="image/svg+xml" href="assets/imgs/software-favicon.svg">
+    <link rel="apple-touch-icon" href="assets/imgs/software-favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,15 +20,19 @@
 </head>
 
 <body class="resume-page" data-theme="light">
+    <script>
+        (function () {
+            var theme = localStorage.getItem("portfolio-theme") || "light";
+            document.documentElement.setAttribute("data-theme", theme);
+            document.body.setAttribute("data-theme", theme);
+        })();
+    </script>
     <div class="site-orb site-orb-one"></div>
     <div class="site-orb site-orb-two"></div>
 
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
         <div class="container">
             <a class="navbar-brand brand-lockup" href="index.html">
-                <span class="brand-mark">
-                    <img src="assets/imgs/profile.png" alt="" aria-hidden="true">
-                </span>
                 <span class="brand-copy">
                     <span class="brand-name">George Mwenya Muyeba</span>
                     <span class="brand-role">Resume</span>

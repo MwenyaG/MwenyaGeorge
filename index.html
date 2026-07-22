@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#f4f7fb">
     <title>George Mwenya Muyeba | Software Developer</title>
-    <link rel="icon" type="image/png" href="assets/imgs/profile.png">
-    <link rel="apple-touch-icon" href="assets/imgs/profile.png">
+    <link rel="icon" type="image/svg+xml" href="assets/imgs/software-favicon.svg">
+    <link rel="apple-touch-icon" href="assets/imgs/software-favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,15 +19,22 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="100" id="home" data-theme="light">
+    <script>
+        (function () {
+            var theme = localStorage.getItem("portfolio-theme") || "light";
+            document.documentElement.setAttribute("data-theme", theme);
+            document.body.setAttribute("data-theme", theme);
+        })();
+    </script>
+    <div class="scroll-progress" aria-hidden="true">
+        <span class="scroll-progress-bar"></span>
+    </div>
     <div class="site-orb site-orb-one"></div>
     <div class="site-orb site-orb-two"></div>
 
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
             <a class="navbar-brand brand-lockup" href="#home">
-                <span class="brand-mark">
-                    <img src="assets/imgs/profile.png" alt="" aria-hidden="true">
-                </span>
                 <span class="brand-copy">
                     <span class="brand-name">George Mwenya Muyeba</span>
                     <span class="brand-role">Software Developer</span>
@@ -88,19 +95,21 @@
     </nav>
 
     <header class="hero-section">
+        <div class="hero-ambient" aria-hidden="true">
+            <span class="hero-ambient-line hero-ambient-line-one"></span>
+            <span class="hero-ambient-line hero-ambient-line-two"></span>
+            <span class="hero-ambient-line hero-ambient-line-three"></span>
+            <span class="hero-ambient-node hero-ambient-node-one"></span>
+            <span class="hero-ambient-node hero-ambient-node-two"></span>
+            <span class="hero-ambient-node hero-ambient-node-three"></span>
+        </div>
         <div class="container">
             <div class="row align-items-center hero-row">
-                <div class="col-lg-8">
+                <div class="col-12">
                     <div class="hero-copy reveal">
-                        <div class="hero-chip">Available for software engineering roles</div>
-                        <p class="hero-kicker">Software for real operations</p>
                         <h1 class="hero-title">
                             Clean software for real-world operations.
                         </h1>
-                        <p class="hero-text">
-                            I build focused web products, operational tools, and delivery systems that stay clear in
-                            real use.
-                        </p>
                         <div class="hero-actions">
                             <a href="resume.html" class="btn btn-primary hero-btn">
                                 <i class="ti-printer pr-2"></i>Resume
@@ -108,37 +117,6 @@
                             <a href="#current-projects" class="btn hero-btn hero-btn-secondary">
                                 <i class="ti-layout-grid2 pr-2"></i>Current Work
                             </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="hero-panel reveal">
-                        <div class="hero-profile">
-                            <img src="assets/imgs/profile.png" alt="Portrait of George Mwenya Muyeba"
-                                class="hero-avatar">
-                            <div>
-                                <p class="profile-label">Developer Snapshot</p>
-                                <h2>Product-focused engineer for clear operational tools.</h2>
-                            </div>
-                        </div>
-                        <div class="snapshot-grid">
-                            <div class="snapshot-item">
-                                <span>Current build</span>
-                                <strong>The System / Ibala Farm Management System</strong>
-                            </div>
-                            <div class="snapshot-item">
-                                <span>Delivery style</span>
-                                <strong>QA, APIs, documentation, and product structure</strong>
-                            </div>
-                            <div class="snapshot-item">
-                                <span>Works with</span>
-                                <strong>React, Angular, Flutter, and TypeScript</strong>
-                            </div>
-                        </div>
-                        <div class="hero-panel-tags">
-                            <span>Operational systems</span>
-                            <span>Web apps</span>
-                            <span>QA-minded delivery</span>
                         </div>
                     </div>
                 </div>
@@ -151,60 +129,33 @@
             <div class="section-heading reveal">
                 <span class="section-label">About</span>
                 <h2>Delivery-first software, built with structure.</h2>
-                <p>I focus on usable interfaces, clean systems, and shipping work that holds up in practice.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="story-card reveal">
-                        <div class="story-copy">
-                            <p>
-                                I graduated in Software Engineering from Xiamen University Malaysia and built hands-on
-                                experience through Fieldex, freelance product work, testing, and operations-focused
-                                system design.
-                            </p>
-                            <blockquote class="quote-card">
-                                I like building software that feels considered, not just functional.
-                            </blockquote>
-                        </div>
-                        <div class="about-fill-grid">
-                            <div class="about-fill-item">
-                                <span>Current focus</span>
-                                <strong>Operational software and product systems</strong>
-                            </div>
-                            <div class="about-fill-item">
-                                <span>Recent lane</span>
-                                <strong>Farm management, workflow design, and QA-backed delivery</strong>
-                            </div>
-                            <div class="about-fill-item">
-                                <span>Working style</span>
-                                <strong>Structured, visual, and built for real use</strong>
-                            </div>
-                        </div>
-                    </div>
+            <div class="about-summary reveal">
+                <p>
+                    I graduated in Software Engineering from Xiamen University Malaysia and built hands-on experience
+                    through Fieldex, freelance product work, testing, and operations-focused system design.
+                </p>
+            </div>
+            <div class="experience-grid experience-grid-wide reveal">
+                <div class="experience-tile">
+                    <i class="ti-mobile"></i>
+                    <h3>Testing</h3>
+                    <p>Automation, API checks, and quality-minded delivery.</p>
                 </div>
-                <div class="col-lg-5">
-                    <div class="experience-grid reveal">
-                        <div class="experience-tile">
-                            <i class="ti-mobile"></i>
-                            <h3>Testing</h3>
-                            <p>Automation, API checks, and quality-minded delivery.</p>
-                        </div>
-                        <div class="experience-tile">
-                            <i class="ti-plug"></i>
-                            <h3>APIs</h3>
-                            <p>Integration-focused work built around structure and reliability.</p>
-                        </div>
-                        <div class="experience-tile">
-                            <i class="ti-write"></i>
-                            <h3>Documentation</h3>
-                            <p>Clear technical communication and project artefacts.</p>
-                        </div>
-                        <div class="experience-tile">
-                            <i class="ti-layers"></i>
-                            <h3>Systems</h3>
-                            <p>Workflow-heavy products across web, mobile, and operations.</p>
-                        </div>
-                    </div>
+                <div class="experience-tile">
+                    <i class="ti-plug"></i>
+                    <h3>APIs</h3>
+                    <p>Integration-focused work built around structure and reliability.</p>
+                </div>
+                <div class="experience-tile">
+                    <i class="ti-write"></i>
+                    <h3>Documentation</h3>
+                    <p>Clear technical communication and project artefacts.</p>
+                </div>
+                <div class="experience-tile">
+                    <i class="ti-layers"></i>
+                    <h3>Systems</h3>
+                    <p>Workflow-heavy products across web, mobile, and operations.</p>
                 </div>
             </div>
             <div class="specialties reveal">
@@ -228,7 +179,7 @@
                 <ul class="nav project-tabs-nav" role="tablist">
                     <li class="nav-item">
                         <a class="project-tab-link active" data-toggle="pill" href="#project-ibala" role="tab"
-                            aria-selected="true">The System</a>
+                            aria-selected="true">Ibala</a>
                     </li>
                     <li class="nav-item">
                         <a class="project-tab-link" data-toggle="pill" href="#project-stash" role="tab"
@@ -246,7 +197,7 @@
                             <div class="project-tab-copy">
                                 <div class="featured-project-overview">
                                     <span class="project-tab-kicker">Operational platform</span>
-                                    <h3>The System: Ibala Farm Management System</h3>
+                                    <h3>Ibala Farm Management System</h3>
                                     <p class="featured-lead">
                                         One platform for farm operations, stock, finance, and sales.
                                     </p>
@@ -256,6 +207,12 @@
                                         <span>Finance</span>
                                         <span>Sales</span>
                                     </div>
+                                    <div class="project-tab-actions">
+                                        <a href="https://ibala.farm/" target="_blank" rel="noreferrer"
+                                            class="btn project-live-link">
+                                            <i class="ti-world pr-2"></i>Visit Live Site
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="featured-project-note">
                                     <span class="section-label">Key highlights</span>
@@ -264,7 +221,7 @@
                                 </div>
                             </div>
                             <div class="preview-stage">
-                                <article class="preview-card">
+                                <article class="preview-card theme-preview theme-preview-light" data-theme-preview="light">
                                     <div class="preview-card-head">
                                         <div>
                                             <span class="preview-label">Product Preview</span>
@@ -283,7 +240,7 @@
                                         </div>
                                     </button>
                                 </article>
-                                <article class="preview-card">
+                                <article class="preview-card theme-preview theme-preview-dark" data-theme-preview="dark" hidden>
                                     <div class="preview-card-head">
                                         <div>
                                             <span class="preview-label">Product Preview</span>
@@ -328,14 +285,14 @@
                                         dark themes.</p>
                                     <div class="project-tab-actions">
                                         <a href="https://stash-leading-27p5dfip8-gmuyeba2001-3135s-projects.vercel.app/"
-                                            target="_blank" rel="noreferrer" class="btn btn-primary hero-btn">
+                                            target="_blank" rel="noreferrer" class="btn project-live-link">
                                             <i class="ti-world pr-2"></i>Visit Live Site
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="preview-stage">
-                                <article class="preview-card">
+                            <div class="preview-stage preview-carousel" data-preview-carousel>
+                                <article class="preview-card is-active">
                                     <div class="preview-card-head">
                                         <div>
                                             <span class="preview-label">Launch Preview</span>
@@ -399,14 +356,14 @@
                                         and easy to scan.</p>
                                     <div class="project-tab-actions">
                                         <a href="https://olange-solutions.vercel.app/" target="_blank"
-                                            rel="noreferrer" class="btn btn-primary hero-btn">
+                                            rel="noreferrer" class="btn project-live-link">
                                             <i class="ti-world pr-2"></i>Visit Live Site
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="preview-stage">
-                                <article class="preview-card">
+                            <div class="preview-stage preview-carousel" data-preview-carousel>
+                                <article class="preview-card is-active">
                                     <div class="preview-card-head">
                                         <div>
                                             <span class="preview-label">Project Preview</span>
@@ -975,14 +932,16 @@
                         </a>
                     </div>
                     <div class="linkedin-badge-wrap" aria-label="LinkedIn profile badge">
-                        <div class="linkedin-badge-theme linkedin-badge-light">
+                        <div class="linkedin-badge-theme linkedin-badge-light theme-preview theme-preview-light"
+                            data-theme-preview="light">
                             <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium"
                                 data-theme="light" data-type="VERTICAL" data-vanity="george-muyeba-8599ba222"
                                 data-version="v1"><a class="badge-base__link LI-simple-link"
                                     href="https://zm.linkedin.com/in/george-muyeba-8599ba222?trk=profile-badge">George
                                     Muyeba</a></div>
                         </div>
-                        <div class="linkedin-badge-theme linkedin-badge-dark">
+                        <div class="linkedin-badge-theme linkedin-badge-dark theme-preview theme-preview-dark"
+                            data-theme-preview="dark" hidden>
                             <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium"
                                 data-theme="dark" data-type="VERTICAL" data-vanity="george-muyeba-8599ba222"
                                 data-version="v1"><a class="badge-base__link LI-simple-link"

@@ -8,6 +8,7 @@
     var storageKey = "portfolio-theme";
 
     function setTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
         document.body.setAttribute("data-theme", theme);
 
         var metaTheme = document.querySelector('meta[name="theme-color"]');
@@ -27,12 +28,17 @@
                 label.textContent = theme === "dark" ? "Light mode" : "Dark mode";
             }
         });
+
+        document.querySelectorAll("[data-theme-preview]").forEach(function (preview) {
+            var isActive = preview.getAttribute("data-theme-preview") === theme;
+            preview.hidden = !isActive;
+            preview.setAttribute("aria-hidden", isActive ? "false" : "true");
+        });
     }
 
     function initTheme() {
         var savedTheme = localStorage.getItem(storageKey);
-        var theme = savedTheme || "light";
-        setTheme(theme);
+        setTheme(savedTheme || "light");
 
         document.querySelectorAll(".theme-toggle").forEach(function (toggle) {
             toggle.addEventListener("click", function () {
@@ -113,6 +119,30 @@
         });
     }
 
+    function initScrollProgress() {
+        var ticking = false;
+
+        function updateProgress() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+            var maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+            var progress = Math.min(100, Math.max(0, (scrollTop / maxScroll) * 100));
+
+            document.documentElement.style.setProperty("--scroll-progress", progress.toFixed(2));
+            ticking = false;
+        }
+
+        function requestUpdate() {
+            if (!ticking) {
+                window.requestAnimationFrame(updateProgress);
+                ticking = true;
+            }
+        }
+
+        updateProgress();
+        window.addEventListener("scroll", requestUpdate, { passive: true });
+        window.addEventListener("resize", requestUpdate);
+    }
+
     function initProjectCards() {
         document.querySelectorAll(".project-display-card[aria-hidden='true'] a").forEach(function (link) {
             link.setAttribute("tabindex", "-1");
@@ -136,12 +166,75 @@
         });
     }
 
+    function initPreviewCarousels() {
+        document.querySelectorAll("[data-preview-carousel]").forEach(function (carousel) {
+            var slides = Array.prototype.slice.call(carousel.querySelectorAll(".preview-card"));
+            var activeIndex = slides.findIndex(function (slide) {
+                return slide.classList.contains("is-active");
+            });
+
+            if (slides.length < 2) {
+                return;
+            }
+
+            if (activeIndex < 0) {
+                activeIndex = 0;
+                slides[0].classList.add("is-active");
+            }
+
+            window.setInterval(function () {
+                slides[activeIndex].classList.remove("is-active");
+                activeIndex = (activeIndex + 1) % slides.length;
+                slides[activeIndex].classList.add("is-active");
+            }, 5000);
+        });
+    }
+
+    function initProjectAutoCycle() {
+        var tabLinks = Array.prototype.slice.call(document.querySelectorAll("#current-projects .project-tab-link"));
+        var activeIndex = 0;
+        var intervalId;
+
+        if (tabLinks.length < 2 || !window.jQuery) {
+            return;
+        }
+
+        function syncActiveIndex() {
+            var currentIndex = tabLinks.findIndex(function (link) {
+                return link.classList.contains("active");
+            });
+
+            activeIndex = currentIndex >= 0 ? currentIndex : 0;
+        }
+
+        function showNextProject() {
+            syncActiveIndex();
+            activeIndex = (activeIndex + 1) % tabLinks.length;
+            window.jQuery(tabLinks[activeIndex]).tab("show");
+        }
+
+        function restartTimer() {
+            window.clearInterval(intervalId);
+            syncActiveIndex();
+            intervalId = window.setInterval(showNextProject, 10000);
+        }
+
+        tabLinks.forEach(function (link) {
+            link.addEventListener("click", restartTimer);
+        });
+
+        restartTimer();
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         initTheme();
         initReveal();
         initSmoothScroll();
         initMobileNav();
+        initScrollProgress();
         initProjectCards();
         initDashboardPreview();
+        initPreviewCarousels();
+        initProjectAutoCycle();
     });
 })();
