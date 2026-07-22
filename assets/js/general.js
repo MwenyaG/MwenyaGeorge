@@ -111,9 +111,31 @@
     }
 
     function initMobileNav() {
+        $(".navbar-collapse .dropdown-toggle").on("click", function (event) {
+            if (window.innerWidth >= 992) {
+                return;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            var toggle = $(this);
+            var parent = toggle.closest(".dropdown");
+            var menu = parent.find(".dropdown-menu").first();
+            var shouldOpen = !menu.hasClass("show");
+
+            $(".navbar-collapse .dropdown-menu.show").not(menu).removeClass("show");
+            $(".navbar-collapse .dropdown-toggle[aria-expanded='true']").not(toggle).attr("aria-expanded", "false");
+
+            menu.toggleClass("show", shouldOpen);
+            toggle.attr("aria-expanded", shouldOpen ? "true" : "false");
+        });
+
         $(".navbar-collapse .nav-link:not(.dropdown-toggle), .navbar-collapse .dropdown-item").on("click", function () {
             var collapse = $(".navbar-collapse");
             if (collapse.hasClass("show")) {
+                $(".navbar-collapse .dropdown-menu.show").removeClass("show");
+                $(".navbar-collapse .dropdown-toggle[aria-expanded='true']").attr("aria-expanded", "false");
                 collapse.collapse("hide");
             }
         });
