@@ -81,7 +81,7 @@
     function initSmoothScroll() {
         $(".navbar .nav-link, a.hero-btn-secondary[href^='#']").on("click", function (event) {
             var hash = this.hash;
-            if (!hash) {
+            if (!hash || hash === "#") {
                 return;
             }
 
@@ -101,6 +101,15 @@
             }, 700, function () {
                 window.location.hash = hash;
             });
+        });
+    }
+
+    function initMobileNav() {
+        $(".navbar-collapse .nav-link, .navbar-collapse .dropdown-item").on("click", function () {
+            var collapse = $(".navbar-collapse");
+            if (collapse.hasClass("show")) {
+                collapse.collapse("hide");
+            }
         });
     }
 
@@ -131,6 +140,7 @@
         initTheme();
         initReveal();
         initSmoothScroll();
+        initMobileNav();
         initProjectCards();
         initDashboardPreview();
     });

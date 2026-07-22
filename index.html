@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/general.css">
@@ -25,7 +25,9 @@
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
             <a class="navbar-brand brand-lockup" href="#home">
-                <span class="brand-mark">GM</span>
+                <span class="brand-mark">
+                    <img src="assets/imgs/profile.png" alt="" aria-hidden="true">
+                </span>
                 <span class="brand-copy">
                     <span class="brand-name">George Mwenya Muyeba</span>
                     <span class="brand-role">Software Developer</span>
@@ -38,16 +40,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto align-items-lg-center">
-                    <li class="nav-item"><a href="certificates.html" class="nav-link">Certificates</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#resume" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Projects</a></li>
+                    <li class="nav-item dropdown nav-dropdown-item">
+                        <button class="nav-link nav-link-button dropdown-toggle nav-dropdown-toggle" type="button"
+                            id="workMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Work
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right nav-dropdown-menu" aria-labelledby="workMenu">
+                            <a class="dropdown-item" href="#current-projects">Current Projects</a>
+                            <a class="dropdown-item" href="#resume">Skills</a>
+                            <a class="dropdown-item" href="#portfolio">Project Archive</a>
+                        </div>
+                    </li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                    <li class="nav-item nav-divider d-none d-lg-block"></li>
-                    <li class="nav-item"><a href="https://github.com/MwenyaG" class="nav-link" target="_blank"
-                            rel="noreferrer">GitHub</a></li>
-                    <li class="nav-item"><a href="https://www.linkedin.com/in/george-muyeba-8599ba222"
-                            class="nav-link" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                    <li class="nav-item dropdown nav-dropdown-item">
+                        <button class="nav-link nav-link-button dropdown-toggle nav-dropdown-toggle" type="button"
+                            id="linksMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Links
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right nav-dropdown-menu" aria-labelledby="linksMenu">
+                            <a class="dropdown-item" href="resume.html">Resume</a>
+                            <a class="dropdown-item" href="certificates.html">Certificates</a>
+                            <a class="dropdown-item" href="https://github.com/MwenyaG" target="_blank"
+                                rel="noreferrer">GitHub</a>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/george-muyeba-8599ba222"
+                                target="_blank" rel="noreferrer">LinkedIn</a>
+                        </div>
+                    </li>
                     <li class="nav-item theme-toggle-item">
                         <button class="theme-toggle" type="button" aria-label="Toggle dark mode"
                             aria-pressed="false">
@@ -73,32 +92,22 @@
             <div class="row align-items-center hero-row">
                 <div class="col-lg-8">
                     <div class="hero-copy reveal">
-                        <div class="hero-chip">Available for freelance and junior software engineering roles</div>
-                        <p class="hero-kicker">BUILDING PRODUCTS THAT FEEL FAST, CLEAN, AND USEFUL</p>
+                        <div class="hero-chip">Available for software engineering roles</div>
+                        <p class="hero-kicker">Software for real operations</p>
                         <h1 class="hero-title">
-                            Building clean software for real-world operations.
+                            Clean software for real-world operations.
                         </h1>
                         <p class="hero-text">
-                            Software developer focused on modern web apps, operational systems, and quality-minded
-                            delivery.
+                            I build focused web products, operational tools, and delivery systems that stay clear in
+                            real use.
                         </p>
                         <div class="hero-actions">
                             <a href="resume.html" class="btn btn-primary hero-btn">
-                                <i class="ti-printer pr-2"></i>View Resume
+                                <i class="ti-printer pr-2"></i>Resume
                             </a>
                             <a href="#current-projects" class="btn hero-btn hero-btn-secondary">
-                                <i class="ti-layout-grid2 pr-2"></i>See Product Preview
+                                <i class="ti-layout-grid2 pr-2"></i>Current Work
                             </a>
-                        </div>
-                        <div class="hero-meta">
-                            <div class="hero-meta-card">
-                                <span class="hero-meta-label">Focus</span>
-                                <strong>Web apps, cross-platform UI, and workflow systems</strong>
-                            </div>
-                            <div class="hero-meta-card">
-                                <span class="hero-meta-label">Strengths</span>
-                                <strong>QA, APIs, documentation, and product clarity</strong>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -109,7 +118,7 @@
                                 class="hero-avatar">
                             <div>
                                 <p class="profile-label">Developer Snapshot</p>
-                                <h2>Product-focused engineer building clean, useful systems</h2>
+                                <h2>Product-focused engineer for clear operational tools.</h2>
                             </div>
                         </div>
                         <div class="snapshot-grid">
@@ -118,26 +127,18 @@
                                 <strong>The System / Ibala Farm Management System</strong>
                             </div>
                             <div class="snapshot-item">
-                                <span>Best at</span>
-                                <strong>Turning complex workflows into clear product experiences</strong>
+                                <span>Delivery style</span>
+                                <strong>QA, APIs, documentation, and product structure</strong>
                             </div>
                             <div class="snapshot-item">
                                 <span>Works with</span>
-                                <strong>React, Angular, Flutter, TypeScript, QA tooling</strong>
+                                <strong>React, Angular, Flutter, and TypeScript</strong>
                             </div>
                         </div>
                         <div class="hero-panel-tags">
-                            <span>Farm operations</span>
-                            <span>Inventory</span>
-                            <span>Finance</span>
-                            <span>Localization</span>
-                        </div>
-                        <div class="current-focus compact-focus">
-                            <p class="focus-label">Current flagship</p>
-                            <div class="focus-item">
-                                <span class="focus-badge">Ibala Farm Management System</span>
-                                <p>Centralized farm operations, stock, finance, and sales.</p>
-                            </div>
+                            <span>Operational systems</span>
+                            <span>Web apps</span>
+                            <span>QA-minded delivery</span>
                         </div>
                     </div>
                 </div>
@@ -149,20 +150,17 @@
         <div class="container">
             <div class="section-heading reveal">
                 <span class="section-label">About</span>
-                <h2>Developer mindset backed by delivery and structure.</h2>
-                <p>I like software that is clean to use, organized underneath, and ready for real workflows.</p>
+                <h2>Delivery-first software, built with structure.</h2>
+                <p>I focus on usable interfaces, clean systems, and shipping work that holds up in practice.</p>
             </div>
             <div class="row">
                 <div class="col-lg-7">
                     <div class="story-card reveal">
                         <div class="story-copy">
                             <p>
-                                I graduated in Software Engineering from Xiamen University Malaysia and built practical
-                                experience through internship work at Fieldex plus freelance product development.
-                            </p>
-                            <p>
-                                My work spans web interfaces, mobile apps, QA-oriented testing, documentation, and
-                                systems built around operational clarity.
+                                I graduated in Software Engineering from Xiamen University Malaysia and built hands-on
+                                experience through Fieldex, freelance product work, testing, and operations-focused
+                                system design.
                             </p>
                             <blockquote class="quote-card">
                                 I like building software that feels considered, not just functional.
@@ -224,7 +222,7 @@
             <div class="section-heading reveal">
                 <span class="section-label">Current Projects</span>
                 <h2>Recent work, organized by product.</h2>
-                <p>Switch between active builds and recent launches.</p>
+                <p>Switch between current builds and recent launches.</p>
             </div>
             <div class="current-projects-shell reveal">
                 <ul class="nav project-tabs-nav" role="tablist">
@@ -250,14 +248,10 @@
                                     <span class="project-tab-kicker">Operational platform</span>
                                     <h3>The System: Ibala Farm Management System</h3>
                                     <p class="featured-lead">
-                                        Designed to bring livestock, crops, inventory, finance, and sales into one
-                                        clear product.
+                                        One platform for farm operations, stock, finance, and sales.
                                     </p>
                                     <div class="featured-project-tags">
                                         <span>Livestock</span>
-                                        <span>Poultry</span>
-                                        <span>Fish farming</span>
-                                        <span>Crop production</span>
                                         <span>Inventory</span>
                                         <span>Finance</span>
                                         <span>Sales</span>
@@ -265,8 +259,8 @@
                                 </div>
                                 <div class="featured-project-note">
                                     <span class="section-label">Key highlights</span>
-                                    <p>Dashboard visibility, stock control, smart IDs, alerts, and multilingual support
-                                        across English and major Zambian languages.</p>
+                                    <p>Dashboard visibility, stock control, alerts, and multilingual support for
+                                        real agricultural workflows.</p>
                                 </div>
                             </div>
                             <div class="preview-stage">
@@ -319,20 +313,19 @@
                                     <span class="project-tab-kicker">Landing website</span>
                                     <h3>Stash Leading Services</h3>
                                     <p class="featured-lead">
-                                        Service-led landing website built to present a multi-offer business clearly
-                                        across immigration, laundry, media, and loan services.
+                                        A cleaner landing site for a multi-offer business across immigration, laundry,
+                                        media, and loans.
                                     </p>
                                     <div class="featured-project-tags">
                                         <span>Landing page</span>
                                         <span>Service navigation</span>
                                         <span>Business presentation</span>
-                                        <span>Light and dark mode</span>
                                     </div>
                                 </div>
                                 <div class="featured-project-note">
                                     <span class="section-label">Launch focus</span>
-                                    <p>Clean hero messaging, service segmentation, trust signals, and a business-first
-                                        visual system designed to feel clear in both light and dark themes.</p>
+                                    <p>Clear messaging, trust signals, and a visual system that works in light and
+                                        dark themes.</p>
                                     <div class="project-tab-actions">
                                         <a href="https://stash-leading-27p5dfip8-gmuyeba2001-3135s-projects.vercel.app/"
                                             target="_blank" rel="noreferrer" class="btn btn-primary hero-btn">
@@ -391,21 +384,19 @@
                                     <span class="project-tab-kicker">Service and supply website</span>
                                     <h3>Olange Solutions</h3>
                                     <p class="featured-lead">
-                                        Service-led business website built around operational support, supply delivery,
-                                        and a clearer company-facing digital presence.
+                                        A business website built around operational support, supply delivery, and a
+                                        clearer company presence.
                                     </p>
                                     <div class="featured-project-tags">
                                         <span>Business website</span>
-                                        <span>Company profile</span>
                                         <span>Service pages</span>
-                                        <span>Dark and light UI</span>
+                                        <span>Company profile</span>
                                     </div>
                                 </div>
                                 <div class="featured-project-note">
                                     <span class="section-label">Launch focus</span>
-                                    <p>Clear service positioning, a stronger dark-and-light visual system, and a
-                                        structured package-led layout that helps the business feel dependable and easy
-                                        to understand.</p>
+                                    <p>Clear service positioning and a tighter package-led layout that feels dependable
+                                        and easy to scan.</p>
                                     <div class="project-tab-actions">
                                         <a href="https://olange-solutions.vercel.app/" target="_blank"
                                             rel="noreferrer" class="btn btn-primary hero-btn">

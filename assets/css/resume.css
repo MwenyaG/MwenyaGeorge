@@ -48,6 +48,7 @@ body.resume-page .resume-paper.reveal {
     font-size: clamp(2.6rem, 5vw, 4.25rem);
     line-height: 0.94;
     margin-bottom: 0.75rem;
+    font-weight: 600;
 }
 
 .resume-kicker,
@@ -56,13 +57,13 @@ body.resume-page .resume-paper.reveal {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-size: 0.78rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--accent-strong);
 }
 
 .resume-title {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--heading);
     margin-bottom: 0.8rem;
 }
@@ -111,7 +112,7 @@ body.resume-page .resume-paper.reveal {
     background: var(--accent-soft);
     color: var(--accent-strong);
     font-size: 0.82rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .resume-layout {
@@ -262,7 +263,7 @@ body.resume-page .resume-paper.reveal {
     border-radius: 999px;
     background: var(--surface-strong);
     font-size: 0.83rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .resume-list {
