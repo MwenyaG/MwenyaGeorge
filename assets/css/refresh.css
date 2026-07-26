@@ -413,6 +413,12 @@ a:hover {
     background: var(--surface);
     border-radius: 14px;
     padding: 0.5rem 0.7rem;
+    touch-action: manipulation;
+    transition: transform 0.12s ease, background-color 0.16s ease, border-color 0.16s ease;
+}
+
+.custom-navbar .navbar-toggler:active {
+    transform: scale(0.97);
 }
 
 .custom-navbar .navbar-toggler-icon {
@@ -1734,7 +1740,14 @@ a:hover {
         border-radius: 1.25rem;
         background: var(--surface);
         border: 1px solid var(--surface-border);
-        box-shadow: var(--shadow-soft);
+        box-shadow: 0 14px 34px rgba(8, 17, 32, 0.12);
+        transform: translateZ(0);
+        will-change: height;
+    }
+
+    .custom-navbar .navbar-collapse.collapsing {
+        overflow: hidden;
+        transition: height 0.14s ease-out;
     }
 
     .custom-navbar .navbar-nav {
