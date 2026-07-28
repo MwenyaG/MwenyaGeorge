@@ -410,9 +410,58 @@ a:hover {
 }
 
 .hero-section {
-    padding: clamp(2.8rem, 6vh, 5rem) 0 clamp(2rem, 4vh, 3rem);
-    overflow: visible;
+    padding: clamp(4.5rem, 10vh, 7rem) 0 clamp(4rem, 9vh, 6.5rem);
+    overflow: hidden;
     isolation: isolate;
+    background:
+        linear-gradient(rgba(82, 96, 122, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(82, 96, 122, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 50% 52%, rgba(255, 255, 255, 0.68), transparent 36%);
+    background-size: 5rem 5rem, 5rem 5rem, 100% 100%;
+}
+
+.hero-section::before,
+.hero-section::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    border: 1px solid rgba(82, 96, 122, 0.14);
+}
+
+.hero-section::before {
+    width: clamp(7rem, 18vw, 15rem);
+    height: clamp(7rem, 18vw, 15rem);
+    right: max(5vw, 2rem);
+    top: clamp(2.5rem, 7vh, 5rem);
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 0 1.2rem rgba(255, 255, 255, 0.12),
+        inset 0 0 0 2.6rem rgba(82, 96, 122, 0.04);
+    opacity: 0.72;
+}
+
+.hero-section::after {
+    width: clamp(2.8rem, 6vw, 4.25rem);
+    height: clamp(2.8rem, 6vw, 4.25rem);
+    left: clamp(1.5rem, 7vw, 8rem);
+    top: clamp(3rem, 11vh, 6rem);
+    transform: rotate(45deg);
+    opacity: 0.55;
+}
+
+:is(body, html)[data-theme="dark"] .hero-section {
+    background:
+        linear-gradient(rgba(159, 177, 211, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(159, 177, 211, 0.045) 1px, transparent 1px),
+        radial-gradient(circle at 50% 52%, rgba(15, 28, 49, 0.52), transparent 38%);
+    background-size: 5rem 5rem, 5rem 5rem, 100% 100%;
+}
+
+:is(body, html)[data-theme="dark"] .hero-section::before,
+:is(body, html)[data-theme="dark"] .hero-section::after,
+:is(body, html)[data-theme="dark"] .hero-copy::after {
+    border-color: rgba(159, 177, 211, 0.12);
 }
 
 .hero-copy,
@@ -500,6 +549,41 @@ a:hover {
     padding: 1rem 0 0.25rem;
     position: relative;
     z-index: 1;
+    text-align: center;
+}
+
+.hero-copy::before,
+.hero-copy::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.62;
+}
+
+.hero-copy::before {
+    width: 0.42rem;
+    height: 0.42rem;
+    left: clamp(7%, 12vw, 18%);
+    top: 30%;
+    border-radius: 999px;
+    background: rgba(82, 96, 122, 0.36);
+    box-shadow:
+        clamp(28rem, 48vw, 44rem) clamp(-3rem, -6vh, -2rem) 0 rgba(15, 139, 255, 0.18),
+        clamp(25rem, 42vw, 38rem) clamp(9rem, 15vh, 12rem) 0 rgba(24, 194, 192, 0.18),
+        clamp(-5rem, -8vw, -3rem) clamp(9rem, 14vh, 11rem) 0 rgba(255, 188, 79, 0.2);
+}
+
+.hero-copy::after {
+    width: clamp(8rem, 17vw, 14rem);
+    height: clamp(8rem, 17vw, 14rem);
+    left: clamp(2rem, 9vw, 9rem);
+    bottom: -5rem;
+    border: 1px solid rgba(82, 96, 122, 0.12);
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 0 1.5rem rgba(255, 255, 255, 0.08),
+        inset 0 0 0 3rem rgba(82, 96, 122, 0.035);
 }
 
 .section-label,
@@ -527,13 +611,17 @@ a:hover {
 .hero-title {
     font-size: clamp(2.45rem, 5.2vw, 5rem);
     line-height: 1.08;
-    max-width: 100%;
+    max-width: 16ch;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 0;
     font-weight: 600;
 }
 
 .hero-copy {
-    max-width: 78rem;
+    max-width: 62rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .hero-text {
@@ -556,22 +644,30 @@ a:hover {
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    margin: 1.35rem 0 0;
+    justify-content: center;
+    gap: 0.7rem;
+    margin: 1.55rem 0 0;
 }
 
 .hero-btn {
-    border-radius: 999px;
-    padding: 0.72rem 1rem;
-    font-size: 0.88rem;
+    border-radius: 0.42rem;
+    padding: 0.64rem 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     border: 1px solid transparent;
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 12px 26px rgba(20, 34, 68, 0.08);
 }
 
 .btn.btn-primary.hero-btn {
-    background: var(--gradient-main);
-    border-color: transparent;
+    background: var(--heading);
+    border-color: var(--heading);
+    color: #ffffff;
+}
+
+.btn.btn-primary.hero-btn:hover,
+.btn.btn-primary.hero-btn:focus {
+    background: var(--accent);
+    border-color: var(--accent);
     color: #ffffff;
 }
 
@@ -582,6 +678,17 @@ a:hover {
 }
 
 .hero-btn-secondary:hover {
+    color: var(--heading);
+}
+
+:is(body, html)[data-theme="dark"] .btn.btn-primary.hero-btn {
+    background: #f5f8ff;
+    border-color: #f5f8ff;
+    color: #07111f;
+}
+
+:is(body, html)[data-theme="dark"] .hero-btn-secondary {
+    background: rgba(15, 28, 49, 0.82);
     color: var(--heading);
 }
 
@@ -631,7 +738,7 @@ a:hover {
     }
 
     .hero-copy {
-        max-width: 78rem;
+        max-width: 62rem;
     }
 }
 
@@ -1619,7 +1726,8 @@ a:hover {
     }
 
     .hero-section {
-        padding-top: 2.5rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.25rem;
     }
 
     .hero-copy {
@@ -1724,8 +1832,8 @@ a:hover {
     }
 
     .hero-title {
-        max-width: 100%;
-        font-size: clamp(1.9rem, 8vw, 2.45rem);
+        max-width: 15ch;
+        font-size: clamp(2rem, 8vw, 2.7rem);
         line-height: 1.1;
     }
 
@@ -1758,6 +1866,7 @@ a:hover {
     .hero-actions {
         flex-direction: row;
         align-items: center;
+        justify-content: center;
     }
 
     .hero-actions .hero-btn {
@@ -1891,7 +2000,22 @@ a:hover {
     }
 
     .hero-section {
-        padding-top: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-section::before {
+        width: 8rem;
+        height: 8rem;
+        right: -2.5rem;
+        top: 2.2rem;
+    }
+
+    .hero-section::after {
+        width: 2.4rem;
+        height: 2.4rem;
+        left: 1.2rem;
+        top: 3.2rem;
     }
 
     .section,
@@ -1918,12 +2042,12 @@ a:hover {
     }
 
     .hero-actions {
-        gap: 0.65rem;
+        gap: 0.55rem;
     }
 
     .hero-actions .hero-btn {
-        padding: 0.68rem 0.86rem;
-        font-size: 0.84rem;
+        padding: 0.62rem 0.78rem;
+        font-size: 0.8rem;
     }
 
     .hero-kicker {
@@ -1945,7 +2069,7 @@ a:hover {
     }
 
     .hero-title {
-        font-size: clamp(1.85rem, 8vw, 2.35rem);
+        font-size: clamp(2rem, 9vw, 2.55rem);
     }
 
     .section-heading h2 {
