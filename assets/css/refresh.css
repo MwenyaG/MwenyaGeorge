@@ -52,10 +52,7 @@ html {
 
 body {
     font-family: "Manrope", sans-serif;
-    background:
-        radial-gradient(circle at top left, rgba(93, 197, 255, 0.14), transparent 28%),
-        radial-gradient(circle at 80% 0%, rgba(44, 215, 196, 0.1), transparent 24%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+    background: var(--bg);
     color: var(--text);
     min-height: 100vh;
     position: relative;
@@ -118,31 +115,6 @@ a {
 
 a:hover {
     color: var(--accent-strong);
-}
-
-.site-orb {
-    position: fixed;
-    border-radius: 999px;
-    pointer-events: none;
-    filter: blur(8px);
-    opacity: 0.42;
-    z-index: 0;
-}
-
-.site-orb-one {
-    width: 16rem;
-    height: 16rem;
-    top: 6rem;
-    left: -6rem;
-    background: radial-gradient(circle, rgba(15, 139, 255, 0.18), transparent 68%);
-}
-
-.site-orb-two {
-    width: 20rem;
-    height: 20rem;
-    right: -7rem;
-    top: 22rem;
-    background: radial-gradient(circle, rgba(24, 194, 192, 0.16), transparent 68%);
 }
 
 .custom-navbar {
@@ -438,98 +410,9 @@ a:hover {
 }
 
 .hero-section {
-    padding: clamp(2.4rem, 5vh, 4.25rem) 0 clamp(1.5rem, 4vh, 3rem);
+    padding: clamp(2.8rem, 6vh, 5rem) 0 clamp(2rem, 4vh, 3rem);
     overflow: visible;
     isolation: isolate;
-}
-
-.hero-ambient {
-    position: absolute;
-    inset: 0 0 -5rem;
-    z-index: -1;
-    pointer-events: none;
-    overflow: hidden;
-    mask-image: linear-gradient(180deg, black 0%, black 70%, transparent 100%);
-    -webkit-mask-image: linear-gradient(180deg, black 0%, black 70%, transparent 100%);
-}
-
-.hero-ambient::before {
-    content: "";
-    position: absolute;
-    width: min(44vw, 38rem);
-    height: min(44vw, 38rem);
-    top: 7%;
-    right: 3%;
-    border-radius: 999px;
-    background:
-        radial-gradient(circle at 35% 35%, rgba(83, 180, 255, 0.22), transparent 42%),
-        radial-gradient(circle at 68% 60%, rgba(37, 200, 184, 0.18), transparent 46%);
-    filter: blur(18px);
-    opacity: 0.65;
-    animation: hero-ambient-drift 14s ease-in-out infinite alternate;
-}
-
-.hero-ambient-line {
-    position: absolute;
-    right: clamp(2rem, 7vw, 8rem);
-    width: min(34vw, 34rem);
-    height: 1px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, transparent, rgba(125, 234, 216, 0.5), transparent);
-    opacity: 0.42;
-    transform-origin: right center;
-    animation: hero-line-float 10s ease-in-out infinite;
-}
-
-.hero-ambient-line-one {
-    top: 27%;
-}
-
-.hero-ambient-line-two {
-    top: 45%;
-    width: min(27vw, 28rem);
-    animation-delay: -2.5s;
-}
-
-.hero-ambient-line-three {
-    top: 64%;
-    width: min(31vw, 31rem);
-    animation-delay: -5s;
-}
-
-.hero-ambient-node {
-    position: absolute;
-    right: clamp(5rem, 14vw, 17rem);
-    width: 0.65rem;
-    height: 0.65rem;
-    border-radius: 999px;
-    background: rgba(130, 228, 213, 0.72);
-    box-shadow: 0 0 0 8px rgba(83, 180, 255, 0.08), 0 0 28px rgba(83, 180, 255, 0.38);
-    animation: hero-node-pulse 4.5s ease-in-out infinite;
-}
-
-.hero-ambient-node-one {
-    top: 26%;
-}
-
-.hero-ambient-node-two {
-    top: 44%;
-    right: clamp(9rem, 22vw, 26rem);
-    animation-delay: -1.4s;
-}
-
-.hero-ambient-node-three {
-    top: 63%;
-    right: clamp(4rem, 10vw, 12rem);
-    animation-delay: -2.8s;
-}
-
-:is(body, html):not([data-theme="dark"]) .hero-ambient {
-    opacity: 0.72;
-}
-
-:is(body, html)[data-theme="dark"] .hero-ambient {
-    opacity: 0.95;
 }
 
 .hero-copy,
@@ -644,13 +527,13 @@ a:hover {
 .hero-title {
     font-size: clamp(2.45rem, 5.2vw, 5rem);
     line-height: 1.08;
-    max-width: 13ch;
-    margin-bottom: 1rem;
+    max-width: 100%;
+    margin-bottom: 0;
     font-weight: 600;
 }
 
 .hero-copy {
-    max-width: 58rem;
+    max-width: 78rem;
 }
 
 .hero-text {
@@ -748,7 +631,7 @@ a:hover {
     }
 
     .hero-copy {
-        max-width: 58rem;
+        max-width: 78rem;
     }
 }
 
@@ -767,42 +650,6 @@ a:hover {
     .hero-section {
         padding-top: 4.25rem;
         padding-bottom: 2.25rem;
-    }
-}
-
-@keyframes hero-ambient-drift {
-    0% {
-        transform: translate3d(0, 0, 0) scale(1);
-    }
-
-    100% {
-        transform: translate3d(-1.5rem, 1rem, 0) scale(1.05);
-    }
-}
-
-@keyframes hero-line-float {
-    0%,
-    100% {
-        transform: translateX(0) scaleX(0.86);
-        opacity: 0.24;
-    }
-
-    50% {
-        transform: translateX(-1.4rem) scaleX(1);
-        opacity: 0.52;
-    }
-}
-
-@keyframes hero-node-pulse {
-    0%,
-    100% {
-        transform: scale(0.88);
-        opacity: 0.55;
-    }
-
-    50% {
-        transform: scale(1.12);
-        opacity: 0.95;
     }
 }
 
@@ -1775,22 +1622,6 @@ a:hover {
         padding-top: 2.5rem;
     }
 
-    .hero-ambient {
-        opacity: 0.38;
-    }
-
-    .hero-ambient::before {
-        width: 26rem;
-        height: 26rem;
-        top: 8%;
-        right: -9rem;
-    }
-
-    .hero-ambient-line,
-    .hero-ambient-node {
-        display: none;
-    }
-
     .hero-copy {
         padding-bottom: 2rem;
     }
@@ -1893,7 +1724,7 @@ a:hover {
     }
 
     .hero-title {
-        max-width: 12ch;
+        max-width: 100%;
         font-size: clamp(1.9rem, 8vw, 2.45rem);
         line-height: 1.1;
     }
@@ -2063,10 +1894,6 @@ a:hover {
         padding-top: 2rem;
     }
 
-    .hero-ambient {
-        display: none;
-    }
-
     .section,
     .cert-page-header {
         padding: 3rem 0;
@@ -2155,11 +1982,5 @@ a:hover {
     .reveal {
         opacity: 1;
         transform: none;
-    }
-
-    .hero-ambient::before,
-    .hero-ambient-line,
-    .hero-ambient-node {
-        animation: none !important;
     }
 }
