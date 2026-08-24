@@ -4,14 +4,14 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="theme-color" content="#f4f7fb">
+   <meta name="theme-color" content="#f4f1e8">
    <title>George Mwenya Muyeba | Certificates</title>
    <link rel="icon" type="image/svg+xml" href="assets/imgs/software-favicon.svg">
    <link rel="apple-touch-icon" href="assets/imgs/software-favicon.png">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
    <link rel="stylesheet" href="assets/css/general.css">
@@ -34,7 +34,16 @@
                <span class="brand-role">Certificates</span>
             </span>
          </a>
-         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#certNavbar"
+         <button class="theme-toggle theme-toggle-mobile ml-auto d-lg-none" type="button"
+            aria-label="Toggle dark mode" aria-pressed="false">
+            <span class="theme-toggle-track" aria-hidden="true">
+               <span class="theme-toggle-option theme-toggle-option-sun"><i class="ti-light-bulb"></i></span>
+               <span class="theme-toggle-option theme-toggle-option-moon"><i class="ti-shine"></i></span>
+               <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-label sr-only">Dark mode</span>
+         </button>
+         <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#certNavbar"
             aria-controls="certNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
@@ -67,13 +76,49 @@
          <div class="cert-shell reveal">
             <span class="section-label">Credentials</span>
             <h1>Certificates that back up the build-and-ship side of my portfolio.</h1>
-            <p class="mt-3 mb-0">This collection reflects training across frontend development, testing, TypeScript,
-               APIs, and university leadership experience. Select any card to view the full certificate.</p>
+            <p class="mt-3 mb-0">This collection brings together professional registration, academic verification,
+               software training, and university leadership experience. Select any card to view the full credential.</p>
          </div>
       </div>
    </header>
 
    <main class="pb-5">
+      <section class="section pt-0" id="professional-registration">
+         <div class="container">
+            <div class="cert-section-title reveal">
+               <div>
+                  <span class="section-label">Professional Registration</span>
+                  <h2>Registered and licensed with ICTAZ.</h2>
+               </div>
+               <p class="mb-0">Professional standing with Zambia's ICT professional body.</p>
+            </div>
+            <div class="row certificate-grid">
+               <div class="col-md-6 col-lg-4">
+                  <article class="certificate-card reveal">
+                     <button type="button" data-toggle="modal" data-target="#professionalLicenseModal">
+                        <img src="assets/imgs/license.png" alt="ICTAZ practising certificate">
+                        <div class="certificate-meta">
+                           <h3>ICTAZ Practising Certificate</h3>
+                           <p>Licensed ICT professional · 2026</p>
+                        </div>
+                     </button>
+                  </article>
+               </div>
+               <div class="col-md-6 col-lg-4">
+                  <article class="certificate-card reveal">
+                     <button type="button" data-toggle="modal" data-target="#professionalMembershipModal">
+                        <img src="assets/imgs/membership.png" alt="ICTAZ certificate of registration">
+                        <div class="certificate-meta">
+                           <h3>ICTAZ Membership</h3>
+                           <p>Registered affiliate member</p>
+                        </div>
+                     </button>
+                  </article>
+               </div>
+            </div>
+         </div>
+      </section>
+
       <section class="section pt-0">
          <div class="container">
             <div class="cert-section-title reveal">
@@ -209,7 +254,7 @@
          </div>
       </section>
 
-      <section class="section pt-0">
+      <section class="section pt-0" id="academic-credentials">
          <div class="container">
             <div class="cert-section-title reveal">
                <div>
@@ -219,6 +264,17 @@
                <p class="mb-0">Qualifications, recognition, and academic involvement.</p>
             </div>
             <div class="row certificate-grid">
+               <div class="col-md-6 col-lg-4">
+                  <article class="certificate-card reveal">
+                     <button type="button" data-toggle="modal" data-target="#zaqaVerificationModal">
+                        <img src="assets/imgs/zaqa.png" alt="ZAQA certificate of verification and evaluation of qualification">
+                        <div class="certificate-meta">
+                           <h3>ZAQA Qualification Verification</h3>
+                           <p>Bachelor's degree recognised in Zambia</p>
+                        </div>
+                     </button>
+                  </article>
+               </div>
                <div class="col-md-6 col-lg-4">
                   <article class="certificate-card reveal">
                      <button type="button" data-toggle="modal" data-target="#academicCert10Modal">
@@ -358,6 +414,51 @@
          </div>
       </section>
    </main>
+
+   <div class="modal fade cert-modal" id="professionalLicenseModal" tabindex="-1" role="dialog"
+      aria-labelledby="professionalLicenseLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="professionalLicenseLabel">ICTAZ Practising Certificate</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                     aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body"><img src="assets/imgs/license.png" alt="ICTAZ practising certificate"
+                  class="img-fluid"></div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade cert-modal" id="professionalMembershipModal" tabindex="-1" role="dialog"
+      aria-labelledby="professionalMembershipLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="professionalMembershipLabel">ICTAZ Certificate of Registration</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                     aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body"><img src="assets/imgs/membership.png" alt="ICTAZ certificate of registration"
+                  class="img-fluid"></div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade cert-modal" id="zaqaVerificationModal" tabindex="-1" role="dialog"
+      aria-labelledby="zaqaVerificationLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="zaqaVerificationLabel">ZAQA Certificate of Verification and Evaluation</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                     aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body"><img src="assets/imgs/zaqa.png"
+                  alt="ZAQA certificate of verification and evaluation of qualification" class="img-fluid"></div>
+         </div>
+      </div>
+   </div>
 
    <div class="modal fade cert-modal" id="careerCert1Modal" tabindex="-1" role="dialog" aria-labelledby="careerCert1Label"
       aria-hidden="true">

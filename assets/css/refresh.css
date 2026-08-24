@@ -2522,6 +2522,143 @@ a:hover {
     border-radius: 0.75rem;
 }
 
+.credential-notice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 1.8rem;
+}
+
+.credential-notice {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.2rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 0.55rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credential-notice:hover,
+.credential-notice:focus {
+    color: var(--text);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-2px);
+}
+
+.credential-notice-index {
+    color: var(--accent-alt);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+}
+
+.credential-notice h3 {
+    margin: 0.28rem 0 0;
+    font-size: 1rem;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.credential-notice > i {
+    color: var(--accent);
+    font-size: 0.85rem;
+}
+
+/* Compact ringed theme control inspired by the supplied election UI. */
+.theme-toggle {
+    width: 2.55rem;
+    height: 2.55rem;
+    padding: 0.2rem;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    background: var(--bg-elevated);
+    box-shadow: 0 2px 8px rgba(28, 40, 34, 0.12);
+}
+
+.theme-toggle:hover {
+    transform: none;
+    border-color: var(--accent-strong);
+    box-shadow: 0 0 0 3px var(--accent-soft), 0 2px 8px rgba(28, 40, 34, 0.12);
+}
+
+.theme-toggle-track,
+:is(body, html)[data-theme="dark"] .theme-toggle-track {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    background: transparent;
+}
+
+.theme-toggle-option,
+.theme-toggle-option-sun,
+.theme-toggle-option-moon {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--heading);
+    font-family: Georgia, serif;
+    font-size: 1.08rem;
+    line-height: 1;
+}
+
+.theme-toggle-option i {
+    display: none;
+}
+
+.theme-toggle-option-sun::before {
+    content: "\2600";
+}
+
+.theme-toggle-option-moon::before {
+    content: "\263E";
+}
+
+.theme-toggle[aria-pressed="false"] .theme-toggle-option-sun {
+    display: flex;
+    color: var(--heading);
+    opacity: 1;
+}
+
+.theme-toggle[aria-pressed="false"] .theme-toggle-option-moon,
+.theme-toggle[aria-pressed="true"] .theme-toggle-option-sun {
+    display: none;
+}
+
+.theme-toggle[aria-pressed="true"] .theme-toggle-option-moon {
+    display: flex;
+    color: #f1c94f;
+    opacity: 1;
+}
+
+.theme-toggle-thumb {
+    display: none;
+}
+
+:is(body, html)[data-theme="dark"] .theme-toggle {
+    background: #0c1712;
+    border-color: var(--accent);
+}
+
+.theme-toggle-mobile {
+    flex: 0 0 auto;
+}
+
+.certificate-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: var(--bg-soft);
+}
+
 :is(body, html)[data-theme="dark"] .hero-section {
     background:
         linear-gradient(rgba(131, 217, 184, 0.045) 1px, transparent 1px),
@@ -2572,6 +2709,19 @@ a:hover {
     .hero-brief {
         margin-top: 1.5rem;
     }
+
+    .navbar-collapse .theme-toggle-item {
+        display: none;
+    }
+
+    .project-tab-copy {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .featured-project-overview,
+    .featured-project-note {
+        min-height: 0;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -2586,6 +2736,10 @@ a:hover {
 
     .project-tabs-content {
         padding: 0.75rem;
+    }
+
+    .credential-notice-grid {
+        grid-template-columns: 1fr;
     }
 }
 
