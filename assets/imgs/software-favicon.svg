@@ -1,20 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="bg" x1="8" x2="56" y1="8" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1597ff"/>
-      <stop offset="0.55" stop-color="#1fc8c0"/>
-      <stop offset="1" stop-color="#74e3ad"/>
-    </linearGradient>
-    <linearGradient id="screen" x1="16" x2="48" y1="18" y2="46" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#081120"/>
-      <stop offset="1" stop-color="#12335a"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
-  <rect x="14" y="17" width="36" height="28" rx="5" fill="url(#screen)" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
-  <path d="M24 29L19 33L24 37" fill="none" stroke="#dff9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-  <path d="M40 29L45 33L40 37" fill="none" stroke="#dff9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-  <path d="M34 27L30 39" fill="none" stroke="#82e4d5" stroke-linecap="round" stroke-width="3"/>
-  <path d="M25 50H39" fill="none" stroke="#07111f" stroke-linecap="round" stroke-width="4" opacity="0.72"/>
-  <path d="M32 45V50" fill="none" stroke="#07111f" stroke-linecap="round" stroke-width="4" opacity="0.72"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Developer mark">
+  <rect x="3" y="3" width="58" height="58" rx="15" fill="#1c2822"/>
+  <path d="M26 20 15 32l11 12" fill="none" stroke="#58c49b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m38 20 11 12-11 12" fill="none" stroke="#58c49b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m36 16-8 32" fill="none" stroke="#e2ad55" stroke-width="4" stroke-linecap="round"/>
 </svg>
