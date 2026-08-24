@@ -13,7 +13,7 @@
 
         var metaTheme = document.querySelector('meta[name="theme-color"]');
         if (metaTheme) {
-            metaTheme.setAttribute("content", theme === "dark" ? "#07111f" : "#f4f7fb");
+            metaTheme.setAttribute("content", theme === "dark" ? "#07111f" : "#f4f1e8");
         }
 
         var toggles = document.querySelectorAll(".theme-toggle");

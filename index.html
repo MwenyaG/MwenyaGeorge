@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#f4f7fb">
+    <meta name="theme-color" content="#f4f1e8">
     <title>George Mwenya Muyeba | Software Developer</title>
     <link rel="icon" type="image/svg+xml" href="assets/imgs/software-favicon.svg">
     <link rel="apple-touch-icon" href="assets/imgs/software-favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/general.css">
@@ -95,11 +95,14 @@
     <header class="hero-section">
         <div class="container">
             <div class="row align-items-center hero-row">
-                <div class="col-12">
+                <div class="col-12 col-lg-7">
                     <div class="hero-copy reveal">
+                        <div class="hero-kicker"><span class="status-dot"></span> Software engineer · Zambia</div>
                         <h1 class="hero-title">
-                            Clean software for real-world operations.
+                            Clean software for <span>real-world operations.</span>
                         </h1>
+                        <p class="hero-text">I design and build dependable web and mobile products—combining
+                            thoughtful interfaces, structured systems, and a strong QA mindset.</p>
                         <div class="hero-actions">
                             <a href="resume.html" class="btn btn-primary hero-btn">
                                 <i class="ti-printer pr-2"></i>Resume
@@ -109,6 +112,21 @@
                             </a>
                         </div>
                     </div>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <aside class="hero-brief reveal" aria-label="Current focus">
+                        <div class="hero-brief-topline">
+                            <span>Current focus</span>
+                            <span>01 / 03</span>
+                        </div>
+                        <h2>Product work that holds up in the real world.</h2>
+                        <div class="hero-brief-list">
+                            <div><span>01</span><strong>Operational systems</strong></div>
+                            <div><span>02</span><strong>Frontend &amp; mobile UI</strong></div>
+                            <div><span>03</span><strong>Testing &amp; delivery</strong></div>
+                        </div>
+                        <a href="#current-projects" class="hero-brief-link">Explore selected work <i class="ti-arrow-down"></i></a>
+                    </aside>
                 </div>
             </div>
         </div>
@@ -178,6 +196,10 @@
                     <li class="nav-item">
                         <a class="project-tab-link" data-toggle="pill" href="#project-olange" role="tab"
                             aria-selected="false">Olange Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="project-tab-link" data-toggle="pill" href="#project-spscf" role="tab"
+                            aria-selected="false">SPSCF</a>
                     </li>
                 </ul>
 
@@ -387,6 +409,75 @@
                                         <div class="dashboard-shot-frame dashboard-shot-frame-dark">
                                             <img src="assets/imgs/olange2.png"
                                                 alt="Olange Solutions packages section preview"
+                                                class="dashboard-shot">
+                                        </div>
+                                    </button>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="project-spscf" role="tabpanel">
+                        <div class="project-tab-shell">
+                            <div class="project-tab-copy">
+                                <div class="featured-project-overview">
+                                    <span class="project-tab-kicker">Charity website</span>
+                                    <h3>Shane Perry Smith Christian Foundation</h3>
+                                    <p class="featured-lead">
+                                        A mission-led website helping families understand the foundation's cerebral
+                                        palsy programs, treatment support, and community work.
+                                    </p>
+                                    <div class="featured-project-tags">
+                                        <span>Nonprofit website</span>
+                                        <span>Program discovery</span>
+                                        <span>Responsive UI</span>
+                                    </div>
+                                </div>
+                                <div class="featured-project-note">
+                                    <span class="section-label">Launch focus</span>
+                                    <p>Clear program pathways, strong visual storytelling, and accessible calls to
+                                        action for families, partners, and donors.</p>
+                                    <div class="project-tab-actions">
+                                        <a href="https://www.spscf.org/" target="_blank" rel="noreferrer"
+                                            class="btn project-live-link">
+                                            <i class="ti-world pr-2"></i>Visit Live Site
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preview-stage preview-carousel" data-preview-carousel>
+                                <article class="preview-card is-active">
+                                    <div class="preview-card-head">
+                                        <div>
+                                            <span class="preview-label">Project Preview</span>
+                                            <h3>Mission and programs</h3>
+                                        </div>
+                                        <span class="preview-chip">SPSCF</span>
+                                    </div>
+                                    <button type="button" class="dashboard-preview-trigger" data-toggle="modal"
+                                        data-target="#dashboardPreviewModal" data-image="assets/imgs/shane1.png"
+                                        data-title="Shane Perry Smith Christian Foundation - Mission page preview">
+                                        <div class="dashboard-shot-frame dashboard-shot-frame-dark">
+                                            <img src="assets/imgs/shane1.png"
+                                                alt="Shane Perry Smith Christian Foundation mission page preview"
+                                                class="dashboard-shot">
+                                        </div>
+                                    </button>
+                                </article>
+                                <article class="preview-card">
+                                    <div class="preview-card-head">
+                                        <div>
+                                            <span class="preview-label">Project Preview</span>
+                                            <h3>Programs overview</h3>
+                                        </div>
+                                        <span class="preview-chip">SPSCF</span>
+                                    </div>
+                                    <button type="button" class="dashboard-preview-trigger" data-toggle="modal"
+                                        data-target="#dashboardPreviewModal" data-image="assets/imgs/shane2.png"
+                                        data-title="Shane Perry Smith Christian Foundation - Programs page preview">
+                                        <div class="dashboard-shot-frame">
+                                            <img src="assets/imgs/shane2.png"
+                                                alt="Shane Perry Smith Christian Foundation programs page preview"
                                                 class="dashboard-shot">
                                         </div>
                                     </button>
