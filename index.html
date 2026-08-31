@@ -217,6 +217,10 @@
                             aria-selected="true">Ibala</a>
                     </li>
                     <li class="nav-item">
+                        <a class="project-tab-link" data-toggle="pill" href="#project-ibala-landing" role="tab"
+                            aria-selected="false">Ibala Landing Page</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="project-tab-link" data-toggle="pill" href="#project-stash" role="tab"
                             aria-selected="false">Stash Leading</a>
                     </li>
@@ -238,87 +242,42 @@
                                     <span class="project-tab-kicker">Operational platform</span>
                                     <h3>Ibala Farm Management System</h3>
                                     <p class="featured-lead">
-                                        A complete product experience that explains the platform clearly and shows
-                                        farmers how every major module works.
+                                        One platform for farm operations, stock, finance, and sales.
                                     </p>
                                     <div class="featured-project-tags">
-                                        <span>Module screenshots</span>
-                                        <span>Explainer videos</span>
-                                        <span>Product information</span>
-                                        <span>Local languages</span>
-                                    </div>
-                                    <div class="project-tab-actions">
-                                        <a href="https://ibala.farm/" target="_blank" rel="noreferrer"
-                                            class="btn project-live-link">
-                                            <i class="ti-world pr-2"></i>Visit Live Site
-                                        </a>
+                                        <span>Livestock</span>
+                                        <span>Inventory</span>
+                                        <span>Finance</span>
+                                        <span>Sales</span>
                                     </div>
                                 </div>
                                 <div class="featured-project-note">
                                     <span class="section-label">Key highlights</span>
-                                    <p>Detailed module walkthroughs, real interface screenshots, explanation videos,
-                                        and translations across multiple Zambian languages.</p>
+                                    <p>Dashboard visibility, stock control, alerts, and multilingual support for
+                                        real agricultural workflows.</p>
                                 </div>
                             </div>
-                            <div class="preview-stage preview-carousel" data-preview-carousel>
-                                <article class="preview-card is-active">
-                                    <div class="preview-card-head">
-                                        <div>
-                                            <span class="preview-label">Landing Page</span>
-                                            <h3>Complete product overview</h3>
-                                        </div>
-                                        <span class="preview-chip">Ibala Farm</span>
-                                    </div>
-                                    <button type="button" class="dashboard-preview-trigger" data-toggle="modal"
-                                        data-target="#dashboardPreviewModal"
-                                        data-image="assets/imgs/ibala2.png"
-                                        data-title="Ibala Farm - Landing page overview">
-                                        <div class="dashboard-shot-frame">
-                                            <img src="assets/imgs/ibala2.png"
-                                                alt="Ibala Farm landing page showing the product across desktop and mobile"
-                                                class="dashboard-shot">
-                                        </div>
-                                    </button>
-                                </article>
-                                <article class="preview-card">
-                                    <div class="preview-card-head">
-                                        <div>
-                                            <span class="preview-label">Translation</span>
-                                            <h3>Multiple Zambian languages</h3>
-                                        </div>
-                                        <span class="preview-chip">Ibala Farm</span>
-                                    </div>
-                                    <button type="button" class="dashboard-preview-trigger" data-toggle="modal"
-                                        data-target="#dashboardPreviewModal"
-                                        data-image="assets/imgs/ibala1.png"
-                                        data-title="Ibala Farm - Zambian language selector">
-                                        <div class="dashboard-shot-frame">
-                                            <img src="assets/imgs/ibala1.png"
-                                                alt="Ibala Farm landing page showing its Zambian language selector"
-                                                class="dashboard-shot">
-                                        </div>
-                                    </button>
-                                </article>
-                                <article class="preview-card">
+                            <div class="preview-stage">
+                                <article class="preview-card theme-preview theme-preview-light" data-theme-preview="light">
                                     <div class="preview-card-head">
                                         <div>
                                             <span class="preview-label">Product Preview</span>
-                                            <h3>Farm dashboard</h3>
+                                            <h3>Light mode dashboard</h3>
                                         </div>
                                         <span class="preview-chip">Aura Farm</span>
                                     </div>
                                     <button type="button" class="dashboard-preview-trigger" data-toggle="modal"
                                         data-target="#dashboardPreviewModal"
                                         data-image="assets/imgs/Screenshot 2026-04-01 at 1.30.06 AM.png"
-                                        data-title="Ibala Farm Management System - Dashboard preview">
+                                        data-title="Ibala Farm Management System - Light mode dashboard">
                                         <div class="dashboard-shot-frame">
                                             <img src="assets/imgs/Screenshot 2026-04-01 at 1.30.06 AM.png"
-                                                alt="Ibala Farm Management System dashboard preview"
-                                                class="dashboard-shot">
+                                                alt="Ibala Farm Management System light mode dashboard preview"
+                                                class="dashboard-shot dashboard-shot-light">
                                         </div>
                                     </button>
                                 </article>
-                                <article class="preview-card">
+                                <article class="preview-card theme-preview theme-preview-dark" data-theme-preview="dark" hidden>
                                     <div class="preview-card-head">
                                         <div>
                                             <span class="preview-label">Product Preview</span>
@@ -333,6 +292,76 @@
                                         <div class="dashboard-shot-frame dashboard-shot-frame-dark">
                                             <img src="assets/imgs/Screenshot 2026-04-01 at 1.30.27 AM.png"
                                                 alt="Ibala Farm Management System dark mode dashboard preview"
+                                                class="dashboard-shot dashboard-shot-dark">
+                                        </div>
+                                    </button>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="project-ibala-landing" role="tabpanel">
+                        <div class="project-tab-shell">
+                            <div class="project-tab-copy">
+                                <div class="featured-project-overview">
+                                    <span class="project-tab-kicker">Product landing page</span>
+                                    <h3>Ibala Landing Page</h3>
+                                    <p class="featured-lead">
+                                        A complete product website that clearly explains Ibala and shows farmers how
+                                        each major platform module works.
+                                    </p>
+                                    <div class="featured-project-tags">
+                                        <span>Module screenshots</span>
+                                        <span>Explainer videos</span>
+                                        <span>Product information</span>
+                                        <span>Local languages</span>
+                                    </div>
+                                    <div class="project-tab-actions">
+                                        <a href="https://ibala.farm/" target="_blank" rel="noreferrer"
+                                            class="btn project-live-link">
+                                            <i class="ti-world pr-2"></i>Visit Landing Page
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="featured-project-note">
+                                    <span class="section-label">Launch focus</span>
+                                    <p>Detailed module walkthroughs, real interface screenshots, explanation videos,
+                                        and translations across multiple Zambian languages.</p>
+                                </div>
+                            </div>
+                            <div class="preview-stage preview-carousel" data-preview-carousel>
+                                <article class="preview-card is-active">
+                                    <div class="preview-card-head">
+                                        <div>
+                                            <span class="preview-label">Landing Page</span>
+                                            <h3>Complete product overview</h3>
+                                        </div>
+                                        <span class="preview-chip">Ibala Farm</span>
+                                    </div>
+                                    <button type="button" class="dashboard-preview-trigger" data-toggle="modal"
+                                        data-target="#dashboardPreviewModal" data-image="assets/imgs/ibala2.png"
+                                        data-title="Ibala Landing Page - Product overview">
+                                        <div class="dashboard-shot-frame">
+                                            <img src="assets/imgs/ibala2.png"
+                                                alt="Ibala landing page showing the product across desktop and mobile"
+                                                class="dashboard-shot">
+                                        </div>
+                                    </button>
+                                </article>
+                                <article class="preview-card">
+                                    <div class="preview-card-head">
+                                        <div>
+                                            <span class="preview-label">Translation</span>
+                                            <h3>Multiple Zambian languages</h3>
+                                        </div>
+                                        <span class="preview-chip">Ibala Farm</span>
+                                    </div>
+                                    <button type="button" class="dashboard-preview-trigger" data-toggle="modal"
+                                        data-target="#dashboardPreviewModal" data-image="assets/imgs/ibala1.png"
+                                        data-title="Ibala Landing Page - Zambian language selector">
+                                        <div class="dashboard-shot-frame">
+                                            <img src="assets/imgs/ibala1.png"
+                                                alt="Ibala landing page showing its Zambian language selector"
                                                 class="dashboard-shot">
                                         </div>
                                     </button>
