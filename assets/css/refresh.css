@@ -241,9 +241,12 @@ a:hover {
 }
 
 .custom-navbar .dropdown-item:hover,
-.custom-navbar .dropdown-item:focus {
-    background: var(--accent-soft);
-    color: var(--heading);
+.custom-navbar .dropdown-item:focus,
+.custom-navbar .dropdown-item:focus-visible,
+.custom-navbar .dropdown-item.active,
+.custom-navbar .dropdown-item:active {
+    background-color: var(--accent-soft) !important;
+    color: var(--heading) !important;
 }
 
 .custom-navbar .nav-link:hover,
